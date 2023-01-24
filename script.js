@@ -4,15 +4,18 @@ function validateForm() {
     var cat = document.getElementById("cat").value;
 
     if (amount == "") {
-        alert("Expense Amount is Required..!");
+        // alert("Expense Amount is Required..!");
+        msg.innerHTML = `<h6 style="color: red;">Expense Amount is Required..!</h6>`;
         return false;
     }
     if (desc == "") {
-        alert("Expense Description is Required..!");
+        // alert("Expense Description is Required..!");
+        msg.innerHTML = `<h6 style="color: red;">Expense Amount is Required..!</h6>`;
         return false;
     }
     if (cat == "") {
-        alert("Expense Category is Required..!");
+        // alert("Expense Category is Required..!");
+        msg.innerHTML = `<h6 style="color: red;">Expense Amount is Required..!</h6>`;
         return false;
     }
     return true;
@@ -63,6 +66,7 @@ function AddData() {
 
         localStorage.setItem("expenseList", JSON.stringify(expenseList));
         showData();
+        msg.innerHTML = `<h6 style="color: green;">Data Added Successfully..!</h6>`;
         document.getElementById("amount").value = "";
         document.getElementById("desc").value = "";
         document.getElementById("cat").value = "";
@@ -82,6 +86,7 @@ function deleteData(index) {
         expenseList.splice(index, 1);
         localStorage.setItem("expenseList", JSON.stringify(expenseList));
         showData();
+        msg.innerHTML = `<h6 style="color: red;">Data Deleted Successfully..!</h6>`;
     }
 }
 
@@ -108,6 +113,7 @@ function updateData(index) {
 
             localStorage.setItem("expenseList", JSON.stringify(expenseList));
             showData();
+            msg.innerHTML = `<h6 style="color: yellow;">Data Updated Successfully..!</h6>`;
             document.getElementById("amount").value = "";
             document.getElementById("desc").value = "";
             document.getElementById("cat").value = "";
