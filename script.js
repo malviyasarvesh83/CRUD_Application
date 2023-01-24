@@ -10,12 +10,12 @@ function validateForm() {
     }
     if (desc == "") {
         // alert("Expense Description is Required..!");
-        msg.innerHTML = `<h6 style="color: red;">Expense Amount is Required..!</h6>`;
+        msg.innerHTML = `<h6 style="color: red;">Expense Description is Required..!</h6>`;
         return false;
     }
     if (cat == "") {
         // alert("Expense Category is Required..!");
-        msg.innerHTML = `<h6 style="color: red;">Expense Amount is Required..!</h6>`;
+        msg.innerHTML = `<h6 style="color: red;">Expense Category is Required..!</h6>`;
         return false;
     }
     return true;
